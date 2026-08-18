@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings | Trevola</title>
+    <meta name="description" content="View and manage your upcoming and past bookings on Trevola.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <a href="listings.html" class="btn-outline">
+                    ← Back to Listings
+                </a>
+                <h1 class="page-title">My Bookings</h1>
+                <p class="page-subtitle">Everything you've booked, and where things stand with payment.</p>
+            </div>
+        </header>
+
+        <main>
+            <div id="myBookings" class="listings-grid">
+                <p id="message" class="loading-state">Loading your bookings...</p>
+            </div>
+
+            <div class="requirements-card" style="margin-top:40px; max-width:480px;">
+                <h3>Delete My Account</h3>
+                <p style="font-size:0.85rem; margin:8px 0;">
+                    This permanently deletes your account and all your booking history from this browser. This can't be undone.
+                </p>
+                <button id="deleteAccountBtn" type="button" class="btn-outline" style="border-color:#ff4d4d; color:#ff4d4d;">
+                    Delete My Account &amp; All My Data
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="my-bookings.js"></script>
+    <script src="cookie-consent.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Stays | Trevola</title>
+    <meta name="description" content="Browse and filter available properties on Trevola by location, price, dates, and amenities.">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-header">
+        <div class="logo">TRE<span>VOLA</span></div>
+        <div class="header-tagline">YOUR STAY. YOUR WAY.</div>
+        <div class="header-actions">
+            <!-- Navigate directly to your existing Login / Register page -->
+            <a href="index.html" id="signInBtn" class="btn-outline">Sign In</a>
+            <a href="host-register.html" id="becomeHostBtn" class="btn-neon">Become a Host</a>
+
+            <!-- Dynamic Guest actions -->
+            <a href="my-bookings.html" id="myBookingsBtn" class="btn-outline" style="display: none;">My Bookings</a>
+
+            <!-- Dynamic Host actions  -->
+            <a href="create_listing.html" id="createListingBtn" class="btn-outline" style="display: none;">Create Listing</a>
+            <a href="manage-listings.html" id="manageListingsBtn" class="btn-outline" style="display: none;">Manage Listings</a>
+            <button id="signOutBtn" class="btn-outline" style="display: none;">Sign Out</button>
+        </div>
+       
+      </header>
+
+      <!-- 2. Hero Section -->
+      <section class="hero-section">
+        <span class="hero-badge">THE 2026 BOOKING STANDARD</span>
+        <h1 class="hero-title">Your Stay.<br /><span>Your Way.</span></h1>
+
+        <!-- Category Filters Pills -->
+        <div class="category-filters">
+          <button class="category-btn active" data-category="all">
+            ALL STAYS
+          </button>
+          <button class="category-btn" data-category="professional">
+            PROFESSIONAL
+          </button>
+          <button class="category-btn" data-category="working_class">
+            WORKING CLASS
+          </button>
+          <button class="category-btn" data-category="tourist">
+            TOURIST
+          </button>
+        </div>
+
+        <!-- Search / Booking Bar -->
+        <div class="search-bar">
+          <div class="search-item">
+            <label>LOCATION</label>
+            <input
+              type="text"
+              id="locationInput"
+              placeholder="Where do you want to stay?"
+            />
+          </div>
+          <div class="search-item">
+            <label>MAX PRICE (£/night)</label>
+            <input type="number" id="maxPriceInput" min="0" placeholder="e.g. 200" />
+          </div>
+          <div class="search-item">
+            <label>CHECK-IN</label>
+            <input type="date" id="checkInFilterInput" />
+          </div>
+          <div class="search-item">
+            <label>CHECK-OUT</label>
+            <input type="date" id="checkOutFilterInput" />
+          </div>
+          <button class="btn-neon search-btn">FIND MY HQ</button>
+        </div>
+
+        <details class="amenity-filter-panel">
+          <summary>More filters (amenities)</summary>
+          <div class="amenity-checkboxes">
+            <label class="amenity-checkbox"><input type="checkbox" class="amenity-filter-checkbox" value="fast_wifi"> High-Speed Wi-Fi</label>
+            <label class="amenity-checkbox"><input type="checkbox" class="amenity-filter-checkbox" value="dedicated_desk"> Dedicated Desk</label>
+            <label class="amenity-checkbox"><input type="checkbox" class="amenity-filter-checkbox" value="secure_parking"> Secure Parking</label>
+            <label class="amenity-checkbox"><input type="checkbox" class="amenity-filter-checkbox" value="kitchen"> Kitchen / Kitchenette</label>
+            <label class="amenity-checkbox"><input type="checkbox" class="amenity-filter-checkbox" value="pet_friendly"> Pet Friendly</label>
+            <label class="amenity-checkbox"><input type="checkbox" class="amenity-filter-checkbox" value="pool"> Pool / Hot Tub</label>
+            <label class="amenity-checkbox"><input type="checkbox" class="amenity-filter-checkbox" value="near_transport"> Near Transport Links</label>
+            <label class="amenity-checkbox"><input type="checkbox" class="amenity-filter-checkbox" value="near_attractions"> Near Attractions</label>
+          </div>
+        </details>
+      </section>
+
+      <!-- 3. Dynamic Listings Container Grid -->
+      <main>
+        <h2 class="section-heading">Available Stays</h2>
+        <div id="listingsContainer">
+          <!-- Listings injected dynamically via JavaScript -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Import all_listings.js -->
+    <script type="module" src="all_listings.js"></script>
+          <footer class="legal-footer">
+        <a href="terms.html">Terms of Service</a> |
+        <a href="privacy.html">Privacy Policy</a>
+    </footer>
+    <script src="cookie-consent.js"></script>
+</body>
+</html>

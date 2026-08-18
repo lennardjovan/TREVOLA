@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up as a Guest | Trevola</title>
+    <meta name="description" content="Create a free Trevola account to book unique stays.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-wrapper" style="padding-top:60px;">
+
+        <div class="auth-card-airbnb">
+            <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+            <h2 style="margin-top:16px;">Register as User</h2>
+            <form id="userRegistrationForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+
+                <label class="consent-checkbox">
+                    <input type="checkbox" id="ageConfirm" required>
+                    I confirm I am 18 years of age or older
+                </label>
+
+                <label class="consent-checkbox">
+                    <input type="checkbox" id="termsConsent" required>
+                    I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>
+                </label>
+
+                <button type="submit" class="btn-neon full-width" style="margin-top: 16px;">Create Account</button>
+                <button type="button" id="backBtn" class="btn-outline full-width" style="margin-top: 12px;">Back to Login</button>
+
+                <p id="message" class="auth-msg" aria-live="polite"></p>
+            </form>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="file.js"></script>   
+    <script src="cookie-consent.js"></script>
+</body>
+</html>

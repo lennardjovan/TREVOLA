@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings | Trevola</title>
+    <meta name="description" content="View bookings made on your Trevola property listing.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <a href="manage-listings.html" class="btn-outline">
+                    ← Back to Manage Listings
+                </a>
+                <h1 class="page-title">Bookings</h1>
+                <p class="page-subtitle">Guests who have booked this property.</p>
+            </div>
+        </header>
+
+        <main>
+            <div id="hostBookings" class="listings-grid">
+                <p id="message" class="loading-state">Loading bookings...</p>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="host-bookings.js"></script>
+    <script src="cookie-consent.js"></script>
+</body>
+
+</html>
