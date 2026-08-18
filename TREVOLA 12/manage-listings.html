@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Listings | Trevola</title>
+    <meta name="description" content="View, edit, and manage all your Trevola property listings in one place.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <!--Navigation-->
+            <div >
+                <a href="listings.html" class="btn-outline">
+                    ← Back to Listings
+                </a>
+
+                <h1 class="page-title">Manage My Listings</h1>
+                <p class="page-subtitle">View, manage, and edit your active properties.</p>
+            </div>
+
+            <a href="create_listing.html" class="btn-neon">
+                + Create New Listing
+            </a>
+        </header>
+
+            <!-- Dynamic Listings Grid -->
+        <main>
+            <div id="myListings" class="listings-grid">
+                <!-- Fallback / Loading State -->
+                <p id="message" class="loading-state">Loading your listings...</p>
+            </div>
+
+            <div class="requirements-card" style="margin-top:40px; max-width:480px;">
+                <h3>Testing Tools</h3>
+                <p style="font-size:0.85rem; margin:8px 0;">
+                    Remove every guest account that's signed up (and their bookings), while keeping all host accounts and listings — including this one — exactly as they are. Useful for clearing out test signups.
+                </p>
+                <button id="deleteGuestsBtn" type="button" class="btn-outline">
+                    Delete All Guest Accounts
+                </button>
+            </div>
+
+            <div class="requirements-card" style="margin-top:20px; max-width:480px;">
+                <h3>Delete My Account</h3>
+                <p style="font-size:0.85rem; margin:8px 0;">
+                    This permanently deletes your host account, all your listings, and all bookings on them from this browser. This can't be undone.
+                </p>
+                <button id="deleteAccountBtn" type="button" class="btn-outline" style="border-color:#ff4d4d; color:#ff4d4d;">
+                    Delete My Account &amp; All My Data
+                </button>
+            </div>
+        </main>
+    </div>
+       <!--Import manage-listings.js-->
+    <script type="module" src="manage-listings.js"></script>
+    <script src="cookie-consent.js"></script>
+</body>
+
+</html>

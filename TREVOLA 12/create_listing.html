@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create a Listing | Trevola</title>
+    <meta name="description" content="List your property on Trevola — add photos, amenities, and set your price to start hosting guests.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+
+            <div>
+
+                <a href="manage-listings.html" class="btn-outline">
+                    ← Back to Manage Listings
+                </a>
+
+                <h1 class="page-title">
+                    Create New Listing
+                </h1>
+
+                <p class="page-subtitle">
+                    Fill in your property information and upload the required media.
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- Listing Form -->
+        <div class="listing-form-card">
+
+            <form id="createListing">
+
+                <!-- Property Title -->
+                <div class="input-group">
+                    <label for="title">Property Title</label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="e.g. Luxury Apartment in London"
+                        required>
+                </div>
+
+                <!-- Description -->
+                <div class="input-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        rows="5"
+                        placeholder="Describe your property, nearby attractions and facilities..."
+                        required></textarea>
+
+                </div>
+
+                <!-- Category -->
+                <div class="input-group">
+
+                    <label for="category">
+                        Property Category
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select a category
+                        </option>
+
+                        <option value="professional">
+                            Professional
+                        </option>
+
+                        <option value="working_class">
+                            Working Class
+                        </option>
+
+                        <option value="tourist">
+                            Tourist
+                        </option>
+
+                    </select>
+
+                    <p id="categoryDescription" style="font-size:0.82rem; color:#6b6b6b; margin-top:8px;"></p>
+
+                </div>
+
+                <!-- Address -->
+                <div class="input-group">
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <input
+                        type="text"
+                        id="address"
+                        placeholder="123 Example Street"
+                        required>
+
+                </div>
+
+                <!-- Latitude & Longitude -->
+                <div class="location-grid">
+
+                    <div class="input-group">
+
+                        <label for="latitude">
+                            Latitude
+                        </label>
+
+                        <input
+                            type="number"
+                            step="any"
+                            id="latitude"
+                            placeholder="51.5074"
+                            required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="longitude">
+                            Longitude
+                        </label>
+
+                        <input
+                            type="number"
+                            step="any"
+                            id="longitude"
+                            placeholder="-0.1278"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <!-- Price -->
+                <div class="input-group">
+
+                    <label for="price">
+                        Price Per Night (£)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="price"
+                        min="1"
+                        placeholder="150"
+                        required>
+
+                </div>
+
+                <!-- Amenities -->
+                <div class="input-group">
+
+                    <label>
+                        Amenities
+                    </label>
+                    <p style="font-size:0.82rem; color:#6b6b6b; margin-bottom:12px;">
+                        Select everything that applies — these help guests find the right stay for what they need.
+                    </p>
+
+                    <div class="amenity-group">
+                        <h4>For Professionals</h4>
+                        <div class="amenity-checkboxes">
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="fast_wifi"> High-Speed Wi-Fi</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="dedicated_desk"> Dedicated Desk &amp; Chair</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="quiet_for_calls"> Quiet / Good for Video Calls</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="coffee_machine"> Coffee Machine</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="iron"> Iron &amp; Ironing Board</label>
+                        </div>
+                    </div>
+
+                    <div class="amenity-group">
+                        <h4>For Working Stays</h4>
+                        <div class="amenity-checkboxes">
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="secure_parking"> Secure Parking</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="laundry"> Laundry Facilities</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="kitchen"> Kitchen / Kitchenette</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="flexible_checkin"> Flexible Check-in</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="near_transport"> Near Transport Links</label>
+                        </div>
+                    </div>
+
+                    <div class="amenity-group">
+                        <h4>For Tourists</h4>
+                        <div class="amenity-checkboxes">
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="pet_friendly"> Pet Friendly</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="pool"> Pool / Hot Tub</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="bbq"> BBQ Area</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="family_friendly"> Family Friendly (Crib/High Chair)</label>
+                            <label class="amenity-checkbox"><input type="checkbox" name="amenities" value="near_attractions"> Near Attractions</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Stripe Payment Link -->
+                <div class="input-group">
+
+                    <label for="stripePaymentLink">
+                        Stripe Payment Link (for guest payments)
+                    </label>
+
+                    <input
+                        type="url"
+                        id="stripePaymentLink"
+                        placeholder="https://buy.stripe.com/xxxxxxxx">
+
+                </div>
+
+                <div class="requirements-card">
+                    <h3>Setting up payments</h3>
+                    <ul>
+                        <li>Create a free Stripe account, then in the Dashboard go to <strong>Payment Links → New</strong>.</li>
+                        <li>Add a product priced at your <strong>price per night</strong> (£{{price}}), and turn on <strong>"Let customers adjust quantity"</strong>.</li>
+                        <li>Paste the generated link above. Guests will be told to set the quantity to their number of nights at checkout.</li>
+                        <li>You can leave this blank for now and add it later from Manage Listings.</li>
+                    </ul>
+                </div>
+
+                <!-- Upload -->
+                <div class="upload-box">
+
+                    <label for="images">
+
+                        <h3>Upload Property Media</h3>
+
+                        <p>
+                            Select both images and videos.
+                        </p>
+
+                    </label>
+
+                    <input
+                        type="file"
+                        id="images"
+                        multiple
+                        accept="image/*,video/*"
+                        required>
+
+                </div>
+
+                <!-- Preview Area -->
+                <div id="mediaPreview" class="media-preview">
+
+                </div>
+
+                <!-- Upload Status -->
+                <div id="mediaStatus" class="requirements-card">
+
+                    <h3>Trevola Media Requirements</h3>
+
+                    <ul>
+
+                        <li>✅ Minimum 8 Images</li>
+
+                        <li>✅ Minimum 4 Videos</li>
+
+                        <li>✅ Images up to 50MB each</li>
+
+                        <li>✅ Videos up to 50MB each</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-actions">
+
+                    <a href="manage-listings.html"
+                        class="btn-outline">
+
+                        Cancel
+
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn-neon">
+
+                        Create Listing
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="listing-logic.js"></script>
+
+    <script src="cookie-consent.js"></script>
+</body>
+
+</html>
